@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
+import Profile from './components/Profile';
+
 
 function App() {
+  const prf1 = {
+    username: "Delba",
+    designation: "Sales coordinator",
+    posts: 36,
+    followers: 17,
+    following: 789
+  }
+  const prf2 = {
+    username: 'Carol',
+    designation: 'CEO',
+    posts: 5,
+    followers: 197,
+    following: 57
+  }
+
+  const color1 = "#343336";
+const color2 = "#B408A4";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div className='main_style'>
+    <Profile profile={prf1}/>
+    <Profile profile={prf2}/>
+    <Card />  </div> 
+    </>
   );
 }
 
